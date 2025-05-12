@@ -4,5 +4,7 @@ using UnityEngine;
 
 public interface Bullet
 {
-    public void FireBullet(Transform firePos);
+    int bulletForce { get; set; }
+    float timeDestroy  { get; set; }
+    public void FireBullet(GameObject bulletObj,Transform firePos);
 }
