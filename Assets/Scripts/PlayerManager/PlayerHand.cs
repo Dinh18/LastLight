@@ -6,6 +6,11 @@ public class PlayerHand : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector3 mousePos; // vị trí con trỏ chuột
+    public static PlayerHand Instance;
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -32,10 +37,5 @@ public class PlayerHand : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,angle); 
         if((Player.Instance.transform.localScale.x < 0 &&angle <=-140 && angle > -180) || (angle >=160 && angle < 180))
         transform.rotation = Quaternion.Euler(0,0,angle-180); 
-
-            
-        
-        
-
     }
 }
