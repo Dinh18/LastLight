@@ -8,8 +8,6 @@ public class BulletGun : MonoBehaviour, Bullet
     public int bulletForce { get; set; }
     public float timeDestroy { get; set; }
     private float currTime = 0;
-    private GameObject bulletObj;
-
     
     void Update()
     {
@@ -39,10 +37,9 @@ public class BulletGun : MonoBehaviour, Bullet
     {
         // tạo viên đạn
         GameObject bulletTmp = Instantiate(bulletObj, firePos.position, Quaternion.identity);
+        bulletTmp.transform.rotation = PlayerHand.Instance.transform.rotation;
         // thêm lực cho viên đạn đồng thời thay đổi hướng cho viên đạn theo hướng nhìn của player
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
-        Debug.Log(bulletForce);
-        Debug.Log(timeDestroy);
         if(Player.Instance.transform.localScale.x < 0) rb.AddForce(firePos.right * bulletForce,ForceMode2D.Impulse);
         else rb.AddForce(firePos.right * bulletForce * -1,ForceMode2D.Impulse);
     }
