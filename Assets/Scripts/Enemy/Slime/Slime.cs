@@ -26,10 +26,6 @@ public class Slime : MonoBehaviour, IEnemy
     void Update()
     {
         Move();
-        if(hp<=10)
-        {
-            Destroy(this);
-        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {

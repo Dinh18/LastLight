@@ -23,6 +23,8 @@ public class Gun : MonoBehaviour, Weapon
         countDown = 1.5f;
         currTime = countDown;
         bulletGun = bulletObj.GetComponent<BulletGun>();
+        bulletGun.bulletForce = 9;
+        bulletGun.timeDestroy = 2f; 
     }
 
     void Update()
@@ -37,7 +39,7 @@ public class Gun : MonoBehaviour, Weapon
         currTime -= Time.deltaTime;
         if(currTime <= 0f)
         {
-            bulletGun.FireBullet(firePos);
+            bulletGun.FireBullet(bulletObj,firePos);
             currTime = countDown;
         }
     }
