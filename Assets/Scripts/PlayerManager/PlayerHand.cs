@@ -32,7 +32,7 @@ public class PlayerHand : MonoBehaviour
         // Góc xoay tính theo độ
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         // Xoay tay player theo con trỏ chuột
-        Debug.Log(angle);
+        // Debug.Log(angle);
         if(Player.Instance.transform.localScale.x > 0 && angle > -40 && angle < 20)
         transform.rotation = Quaternion.Euler(0,0,angle); 
         if((Player.Instance.transform.localScale.x < 0 &&angle <=-140 && angle > -180) || (angle >=160 && angle < 180))

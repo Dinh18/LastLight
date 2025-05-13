@@ -80002,6 +80002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896612085}
   - component: {fileID: 896612086}
+  - component: {fileID: 896612087}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -80017,13 +80018,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896612084}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.04, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.13938996, w: 0.99023765}
+  m_LocalPosition: {x: 0.05460076, y: -0.019855822, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2116784341}
   m_Father: {fileID: 1405658816}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.025}
 --- !u!212 &896612086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -80076,6 +80078,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &896612087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896612084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10841abe63b4a3247900ddda80889df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1023692140
 GameObject:
   m_ObjectHideFlags: 0
@@ -80101,7 +80115,7 @@ Transform:
   m_GameObject: {fileID: 1023692140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.43, y: 7.07, z: -0.05974197}
+  m_LocalPosition: {x: 4, y: 3, z: -0.05974197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80406,7 +80420,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 896612085}
-  - {fileID: 2116784341}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1405658817
@@ -80977,12 +80990,12 @@ Transform:
   m_GameObject: {fileID: 2116784340}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25999832, y: -0.71000004, z: 0}
+  m_LocalPosition: {x: -0.30999833, y: -0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 104631787}
-  m_Father: {fileID: 1405658816}
+  m_Father: {fileID: 896612085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2116784342
 SpriteRenderer:
@@ -81048,7 +81061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab73bfbd066f6649878af96e59eeaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currTime: 1.5
   bulletObj: {fileID: 1259340781793781246, guid: d4ce1f5b1c9ee3c4e92989080d9a232b, type: 3}
   firePos: {fileID: 104631787}
 --- !u!1660057539 &9223372036854775807
