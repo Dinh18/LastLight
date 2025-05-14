@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WeaponsFactory : MonoBehaviour
 {
-    public Weapon GetWeapon(string weaponType)
-    {
-        if(weaponType == "Gun") return new Gun();
-        return null;
-    }
+    GameObject weapon;
+    // public GameObject GetWeapon(string weaponType)
+    // {
+    //     if(weaponType == "Gun") return Gun.Instance.
+    // }
 }
