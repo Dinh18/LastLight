@@ -5,7 +5,11 @@ using UnityEngine;
 public interface Weapon
 {
     int damage { get; set; }
-    static Weapon Instance;
+    GameObject bulletObj{ get; set; }
+    int bulletForce { get; set; }
+    BulletFire bulletFire{ get; set; }
+    Transform firePos{ get; set; }
+
     public void Attack();
 
 }

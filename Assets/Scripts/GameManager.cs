@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckEnemies();
-        while(slime.Count < 10)
-        {
-            Spawn();
-        }
+        // CheckEnemies();
+        // while(slime.Count < 10)
+        // {
+        //     Spawn();
+        // }
     }
     public void Spawn()
     {

@@ -6,31 +6,30 @@ using UnityEngine;
 public class Gun : MonoBehaviour, Weapon
 {
     public int damage { get ; set ;} // sát thương của viên đạn
-    public GameObject _bulletObj;
+    public GameObject _bulletObj; // Dùng để gán prefab bullet trong inspector
     public GameObject bulletObj
     {
         get => _bulletObj;
         set => _bulletObj = value;
     }
-    public Transform _firePos;
+    public Transform _firePos; // Dùng để gán fire position trong inspector
     public Transform firePos 
     {
         get => _firePos;
         set => _firePos = value;
     }
-    public int bulletForce { get; set; }
+    public int bulletForce { get; set; } // Thêm lực khi tạo viên đạn
     public BulletFire bulletFire { get; set; }
 
     void Awake()
     {
         damage = 30;
-        
+        bulletForce = 9;
+        bulletFire = new BulletFire();
     }
     void Start()
     {
-        damage = 20;
-        bulletForce = 9;
-        bulletFire = new BulletFire();
+
     }
 
     void Update()
