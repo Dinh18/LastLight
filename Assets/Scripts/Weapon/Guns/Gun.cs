@@ -41,8 +41,9 @@ public class Gun : MonoBehaviour, Weapon
     */
     public void Attack()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Gun")
         {
+            Debug.Log("Attack");
             bulletFire.Fire(bulletObj,firePos,bulletForce);
         }
     }

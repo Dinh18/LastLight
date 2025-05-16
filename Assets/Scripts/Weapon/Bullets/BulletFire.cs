@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletFire : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void Fire(GameObject bulletObj, Transform firePos, int bulletForce)
     {
         // tạo viên đạn

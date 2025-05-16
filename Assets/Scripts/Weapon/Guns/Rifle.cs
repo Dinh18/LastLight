@@ -35,13 +35,14 @@ public class Rifle : MonoBehaviour, Weapon
     // Update is called once per frame
     void Update()
     {
-        
+        Attack();   
     }
 
     public void Attack()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Rifle")
         {
+            Debug.Log("Attack");
             bulletFire.Fire(bulletObj,firePos,bulletForce);
         }
     }
