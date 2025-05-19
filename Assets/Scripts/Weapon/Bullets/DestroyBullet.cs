@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour
 {
     float currTime;
     float timeDestroy;
+    private WeaponFactory weaponFactory;
     // Start is called before the first frame update
     void Start()
     {
         currTime = 0;
         timeDestroy = 2f;
+        weaponFactory = new WeaponFactory();
     }
 
     // Update is called once per frame
@@ -24,12 +27,11 @@ public class DestroyBullet : MonoBehaviour
             Destroy(this.gameObject);
         }   
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
+        if (collision.CompareTag("Wall") || collision.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
         }
     }
-
 }
