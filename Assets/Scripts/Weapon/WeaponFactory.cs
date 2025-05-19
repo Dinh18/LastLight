@@ -8,7 +8,7 @@ public class WeaponFactory : MonoBehaviour
 {
     public GameObject gun;
     public GameObject rifle;
-    public GameObject Bomb;
+    public GameObject bomb;
     /*
         - khởi Spawn súng theo prefab
         - trả về null nếu tên súng không có trong danh sách attribute
@@ -27,9 +27,10 @@ public class WeaponFactory : MonoBehaviour
             gameObject.name = nameWeapon;
             return gameObject;
         }
-        if (name == "Bomb")
+        if (nameWeapon == "Bomb")
         {
-            GameObject gameObject = Instantiate(rifle, Player.Instance.transform.position, Quaternion.identity);
+            GameObject gameObject = Instantiate(bomb, Player.Instance.transform.position, Quaternion.identity);
+            Debug.Log("Test");
             return gameObject;
         }
         return null;

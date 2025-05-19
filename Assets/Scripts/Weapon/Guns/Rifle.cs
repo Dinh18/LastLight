@@ -42,7 +42,7 @@ public class Rifle : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Rifle")
+        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currGun.name == "Rifle")
         {
 
             bulletFire.Fire(bulletObj,firePos,bulletForce);

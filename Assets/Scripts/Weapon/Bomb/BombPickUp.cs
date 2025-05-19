@@ -22,10 +22,6 @@ public class BombPickUp : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        
-    }
 
     void OnTriggerStay2D(Collider2D collision)
     {
