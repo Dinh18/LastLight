@@ -17,7 +17,7 @@ public class WeaponPickup : MonoBehaviour
         if (playerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Pickup weapon");
-            WeaponManager.instance.newWeapon = this.gameObject;
+            WeaponManager.instance.newGun = this.gameObject;
         }
     }
 

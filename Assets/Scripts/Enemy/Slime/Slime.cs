@@ -35,7 +35,7 @@ public class Slime : MonoBehaviour, IEnemy
             Debug.Log(this.gameObject.name + " " + hp);
         if(collision.CompareTag("Attack"))
         {
-            hp -= weaponFactory.getDamage(WeaponManager.instance.currWeapon.name);
+            hp -= weaponFactory.getDamage(WeaponManager.instance.currGun.name);
             Debug.Log(this.gameObject.name + " " + hp);
         }
     }

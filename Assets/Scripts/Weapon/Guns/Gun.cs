@@ -43,7 +43,7 @@ public class Gun : MonoBehaviour, IWeapon
     */
     public void Attack()
     {
-        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Gun")
+        if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currGun.name == "Gun")
         {
             bulletFire.Fire(bulletObj,firePos,bulletForce);
         }
