@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Gun : MonoBehaviour, Weapon
+public class Gun : MonoBehaviour, IWeapon
 {
     public int damage { get ; set ;} // sát thương của viên đạn
     public GameObject _bulletObj; // Dùng để gán prefab bullet trong inspector
@@ -20,11 +20,13 @@ public class Gun : MonoBehaviour, Weapon
     }
     public int bulletForce { get; set; } // Thêm lực khi tạo viên đạn
     public BulletFire bulletFire { get; set; }
+    public static Gun instance;
 
     void Awake()
     {
-        damage = 30;
+        damage = 10;
         bulletForce = 9;
+        instance = this;
         bulletFire = new BulletFire();
     }
     void Start()
@@ -43,7 +45,6 @@ public class Gun : MonoBehaviour, Weapon
     {
         if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Gun")
         {
-            Debug.Log("Attack");
             bulletFire.Fire(bulletObj,firePos,bulletForce);
         }
     }

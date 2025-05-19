@@ -56,3 +56,6 @@ TagManager:
   - name: Weapon
     uniqueID: 244747559
     locked: 0
+  - name: Hand
+    uniqueID: 66163653
+    locked: 0

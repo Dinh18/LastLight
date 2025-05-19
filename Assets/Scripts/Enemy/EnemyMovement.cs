@@ -27,6 +27,5 @@ public class EnemyMovement : MonoBehaviour
             rb.velocity = direction * speed;
         }
         else rb.velocity = Vector3.zero;
-
     }
 }

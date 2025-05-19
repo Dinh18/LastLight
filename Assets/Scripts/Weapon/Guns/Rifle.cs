@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rifle : MonoBehaviour, Weapon
+public class Rifle : MonoBehaviour, IWeapon
 {
     public int damage { get; set; }
     [SerializeField] private GameObject _bulletObj;
@@ -19,12 +19,14 @@ public class Rifle : MonoBehaviour, Weapon
     }
     public int bulletForce { get; set; }
     public BulletFire bulletFire { get; set; }
+    public static Rifle instance;
 
     void Awake()
     {
-        damage = 30;
+        damage = 10;
         bulletForce = 9;
         bulletFire = new BulletFire();
+        instance = this;
     }
      // Start is called before the first frame update
     void Start()
@@ -42,10 +44,9 @@ public class Rifle : MonoBehaviour, Weapon
     {
         if(Input.GetMouseButtonDown(0) && WeaponManager.instance.currWeapon.name == "Rifle")
         {
-            Debug.Log("Attack");
+
             bulletFire.Fire(bulletObj,firePos,bulletForce);
         }
     }
 
-   
 }

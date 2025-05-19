@@ -6,10 +6,10 @@ public class PlayerHand : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector3 mousePos; // vị trí con trỏ chuột
-    public static PlayerHand Instance;
+    public static PlayerHand instance;
     void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     void Start()

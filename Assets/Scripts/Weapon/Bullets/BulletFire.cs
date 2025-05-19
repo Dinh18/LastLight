@@ -8,7 +8,7 @@ public class BulletFire : MonoBehaviour
     {
         // tạo viên đạn
         GameObject bulletTmp = Instantiate(bulletObj, firePos.position, Quaternion.identity);
-        bulletTmp.transform.rotation = PlayerHand.Instance.transform.rotation;
+        bulletTmp.transform.rotation = PlayerHand.instance.transform.rotation;
         // thêm lực cho viên đạn đồng thời thay đổi hướng cho viên đạn theo hướng nhìn của player
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
         if(Player.Instance.transform.localScale.x < 0) rb.AddForce(firePos.right * bulletForce,ForceMode2D.Impulse);
